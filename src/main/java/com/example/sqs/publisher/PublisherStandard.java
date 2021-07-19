@@ -24,7 +24,7 @@ public class PublisherStandard implements Publisher{
     private String standardQueueUrl;
 
     @Override
-    @Scheduled(fixedRate = 2000)
+    @Scheduled(fixedRate = 5000)
     public void publisherInSqs() {
 
         //log.info("Sending Message to SQS ");

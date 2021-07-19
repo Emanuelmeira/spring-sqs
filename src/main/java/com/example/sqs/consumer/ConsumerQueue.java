@@ -20,4 +20,21 @@ public class ConsumerQueue {
         log.info("message received {} ",person);
     }
 
+//    @SqsListener(value = "standardQueue", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
+//    public void testSendMessageToDLQ(final Person person) { // @Header("SenderId") String senderId
+//        //deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS
+//        //essa politica deleta a mensagem da fila se a mesma for processada e NENHUM ERRO NAO TRATADO for lançado
+//
+//        log.info("message received {} ",person);
+//
+//        try {
+//            Thread.sleep(4000);
+//        } catch (InterruptedException | RuntimeException e) {
+//            e.printStackTrace();
+//        }
+//
+//        throw new RuntimeException();
+//        //OBS: sistema de DLQ já esta criado no AWS
+//    }
+
 }
